@@ -1,5 +1,15 @@
 <?php
 include(TEMPLATEPATH."/tools/theme-options.php");
+include(TEMPLATEPATH."/tools/enews.php");
+include(TEMPLATEPATH."/tools/snotext.php");
+include(TEMPLATEPATH."/tools/audio.php");
+include(TEMPLATEPATH."/tools/video.php");
+include(TEMPLATEPATH."/tools/videoembed.php");
+include(TEMPLATEPATH."/tools/advertisement.php");
+include(TEMPLATEPATH."/tools/twitter.php");
+include(TEMPLATEPATH."/tools/categorywidget.php");
+include(TEMPLATEPATH."/tools/productshowcase.php");
+include(TEMPLATEPATH."/tools/pagewidget.php");
 
 add_option("home_left_column", '280', '', 'yes');
 add_option("home_center_column", '280', '', 'yes');
@@ -34,14 +44,20 @@ function my_post_image_html( $html, $post_id, $post_image_id ) {
 	global $post;
 	$customlink=get_post_meta($post->ID, customlink, true);
 	$click=get_post_meta($post->ID, 'click_tracker_code', true);
-	if ($customlink) { $photolink = $customlink . $click; $target = 'target="_blank" '; } else { $photolink = get_permalink ($post_id); $target = '';} 
+	if ($customlink) {
+        $photolink = $customlink . $click; $target = 'target="_blank" ';
+    } else {
+        $photolink = get_permalink ($post_id); $target = '';
+    }
 
-  $html = '<a '. $target.'href="' . $photolink . '" title="' . esc_attr( get_post_field( 'post_title', $post_id ) ) . '">' . $html . '</a>';
-  return $html;
+    $html = '<a '. $target.'href="' . $photolink . '" title="' . esc_attr( get_post_field( 'post_title', $post_id ) ) . '">' . $html . '</a>';
 
+    return $html;
 }
 
-if ((get_theme_mod('sno-layout') == "Option 3") || (get_theme_mod('sno-layout') == "Option 6")) { 
+if (
+    (get_theme_mod('sno-layout') == "Option 3") || (get_theme_mod('sno-layout') == "Option 6")
+) {
 	if ( function_exists('register_sidebars') )
 	register_sidebar(array('name'=>'Non-Home Sidebar',
 	'before_widget' => '<div style="clear:both"></div><div class="widgetwrap"><div>',
@@ -84,9 +100,7 @@ if ((get_theme_mod('sno-layout') == "Option 3") || (get_theme_mod('sno-layout') 
 	'before_title' => '</div><div class="titlewrap160"><h2>',
 	'after_title' => '</h2></div><div class="widgetbody">',
 	));
-	}
-
-else { 
+} else {
 	if ( function_exists('register_sidebars') )
 	register_sidebar(array('name'=>'Non-Home Sidebar',
 	'before_widget' => '<div style="clear:both"></div><div class="widgetwrap"><div>',
@@ -129,30 +143,23 @@ else {
 	'before_title' => '</div><div class="titlewrap160"><h2>',
 	'after_title' => '</h2></div><div class="widgetbody">',
 	));
-	}
-
-
+}
 
 //start widgetized-page code added by Nick 9/21/12
+if ( function_exists('register_sidebars') ) {
 
-if ( function_exists('register_sidebars') )
-{
-	
-register_sidebars( 1,
-	array(
-		'name' => 'showcases',
-		'before_widget' => '<div id="%1$s" class="widget %2$s">',
-        'after_widget' => '</div>',
-        'before_title' => '<h2 class="widgettitle">',
-        'after_title' => '</h2>'
-	)
-);
-
+    register_sidebars( 1,
+        array(
+            'name' => 'showcases',
+            'before_widget' => '<div id="%1$s" class="widget %2$s">',
+            'after_widget' => '</div>',
+            'before_title' => '<h2 class="widgettitle">',
+            'after_title' => '</h2>'
+        )
+    );
 
 }
 //end widgetized-page code added by Nick
-
-
 
 // turns a category ID to a Name
 function cat_id_to_name($id) {
@@ -170,18 +177,6 @@ function cat_id_to_slug($id) {
 function page_id_to_name($id) {
     	if ($id == $page->page_ID) { return $page->page_name; break; }
 }
-
-	include(TEMPLATEPATH."/tools/enews.php");
-	include(TEMPLATEPATH."/tools/snotext.php");
-	include(TEMPLATEPATH."/tools/audio.php");
-	include(TEMPLATEPATH."/tools/video.php");
-	include(TEMPLATEPATH."/tools/videoembed.php");
-	include(TEMPLATEPATH."/tools/advertisement.php");
-	include(TEMPLATEPATH."/tools/twitter.php");
-	include(TEMPLATEPATH."/tools/categorywidget.php");
-	include(TEMPLATEPATH."/tools/productshowcase.php");
-	include(TEMPLATEPATH."/tools/pagewidget.php"); 
-
 
 add_theme_support( 'nav-menus' );
 
@@ -230,16 +225,7 @@ function snowriter() {
 		echo $writer; if ($jobtitle) echo ', '.$jobtitle; echo '<br />';
 		}
 	}
-} 
-function remove_admin_bar_links() {
-	global $wp_admin_bar;
-	$wp_admin_bar->remove_menu('my-account-with-avatar');
-	$wp_admin_bar->remove_menu('new-content');
-	$wp_admin_bar->remove_menu('updates');
-	$wp_admin_bar->remove_menu('comments');
-	$wp_admin_bar->remove_menu('appearance');
 }
-add_action( 'wp_before_admin_bar_render', 'remove_admin_bar_links' );
 function my_admin_bar_menu() {
 	global $wp_admin_bar;
 	if ( !is_user_logged_in() || !is_admin_bar_showing() )
@@ -278,7 +264,6 @@ function my_admin_bar_menu() {
 	'title' => __( 'Logout'),
 	'href' => wp_logout_url( home_url() ) ) );
 }
-add_action('admin_bar_menu', 'my_admin_bar_menu');
 
 function sno_dashboard_widget() {
 	// Display whatever it is you want to show
@@ -309,9 +294,7 @@ function sno_dashboard_widget() {
 		<p style="font-size:16px;margin:0px;"><a target="_blank" href="http://schoolnewspapersonline.com/instruction-manual-4-2/">Instruction Manual</a></p>
 		<p style="font-size:16px;margin:0px;"><a target="_blank" href="http://sno.zendesk.com/">Submit a Support Request</a></p>
 		<?php
-} 
-
-add_action('wp_dashboard_setup', 'sno_add_dashboard_widgets' );
+}
 
 function sno_add_dashboard_widgets() {
 	wp_add_dashboard_widget('sno_announcements', 'GoPublish News & Announcements', 'sno_dashboard_widget');
@@ -322,6 +305,9 @@ function sno_add_dashboard_widgets() {
 	$sorted_dashboard = array_merge($sno_widget_backup, $normal_dashboard);
 	$wp_meta_boxes['dashboard']['normal']['core'] = $sorted_dashboard;
 }
+
+//add_action('admin_bar_menu', 'my_admin_bar_menu');
+//add_action('wp_dashboard_setup', 'sno_add_dashboard_widgets' );
 
 function sno_css() {
 	$favicon = get_theme_mod('favicon');
@@ -379,5 +365,58 @@ function sno_thickbox_script() {
   wp_enqueue_style( 'thickbox' );
   wp_enqueue_script( 'thickbox' );
 }
- 
-?>
+
+function remove_admin_bar_links() {
+    global $wp_admin_bar;
+    $wp_admin_bar->remove_menu('new-content');
+    $wp_admin_bar->remove_menu('updates');
+    $wp_admin_bar->remove_menu('appearance');
+    $wp_admin_bar->remove_menu('wp-logo');
+}
+add_action( 'wp_before_admin_bar_render', 'remove_admin_bar_links' );
+
+function add_admin_bar_link($wp_admin_bar) {
+    $class = 'epg-media-link';
+    $wp_admin_bar->add_menu( array(
+        'id' => 'epg-media-link',
+        'title' => __( 'EPG Media, LLC' ),
+        'href' => __('http://www.epgmediallc.com'),
+
+    ) );
+    $wp_admin_bar->add_menu( array(
+        'parent' => 'epg-media-link',
+        'id' => 'epg-media-time-off',
+        'title' => __( 'Time Off Request' ),
+        'href' => __('http://www.epgmediallc.com/time-off-request/'),
+    ) );
+    $wp_admin_bar->add_menu( array(
+        'parent' => 'epg-media-link',
+        'id' => 'epg-media-support',
+        'title' => __( 'IT Request' ),
+        'href' => __('http://www.epgmediallc.com/it-request/'),
+    ) );
+}
+// Add EPG Media menu links
+add_action('admin_bar_menu', 'add_admin_bar_link', 50);
+
+// Set max number of post revisions to hold
+if (!defined('WP_POST_REVISIONS')) define('WP_POST_REVISIONS', 5);
+
+/**
+ *
+ * Displays stat in footer
+ *
+ * @param bool $visible
+ */
+function performance( $visible = false ) {
+
+    $stat = sprintf(  '%d queries in %.3f seconds, using %.2fMB memory',
+        get_num_queries(),
+        timer_stop( 0, 3 ),
+        memory_get_peak_usage() / 1024 / 1024
+    );
+
+    echo $visible ? $stat : "<!-- {$stat} -->" ;
+}
+
+add_action( 'wp_footer', 'performance', 20 );
