@@ -7,7 +7,19 @@
  * @param $newString
  */
 
-include($_SERVER['DOCUMENT_ROOT'] . 'wp-config.php');
+error_reporting(-1);
+ini_set('error_reporting', E_ALL);
+
+define('DB_NAME', 'boating_data');
+
+/** MySQL database username */
+define('DB_USER', 'boating_admin');
+
+/** MySQL database password */
+define('DB_PASSWORD', '(10R.sa4pXp2');
+
+/** MySQL hostname */
+define('DB_HOST', 'localhost');
 
 function epg_sql_table_replace($replaceString, $newString) {
 
