@@ -21,11 +21,11 @@ define('DB_PASSWORD', '(10R.sa4pXp2');
 /** MySQL hostname */
 define('DB_HOST', 'localhost');
 
-function epg_sql_table_replace($replaceString, $newString) {
+function epg_sql_table_replace($tables, $replaceString, $newString) {
 
     echo "<h2>In these fields, <kbd>{$replaceString}</kbd> has been replaced with <kbd>{$newString}</kbd></h2>";
     $t = 0;
-    while ($table = mysql_fetch_row($replaceString)) {
+    while ($table = mysql_fetch_row($tables)) {
         echo '<table style="margin-bottom:20px;">';
         $fields_result = mysql_query("SHOW COLUMNS FROM " . $table[0]);
         if (!$fields_result) {
@@ -98,7 +98,7 @@ echo '</tr></table>';
 
 foreach ($strings as $new => $old){
 
-    epg_sql_table_replace($old, $new);
+    epg_sql_table_replace($tables_result, $old, $new);
 
 }
 
