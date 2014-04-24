@@ -33,7 +33,7 @@ function epg_sql_table_replace($tables, $replaceString, $newString) {
                     $sql = "UPDATE " . $table[0] .
                         " SET " . $field['Field'] . " = replace(" . $field['Field'] . ", '$replaceString', '$newString')";
                     mysql_query($sql);
-                    echo '<td> - ' . mysql_affected_rows() . ' records updated.</td>';
+                    echo '<td>' . mysql_affected_rows() . ' records updated.</td>';
                     echo '</tr>';
                     $i = $i + mysql_affected_rows();
                 }
