@@ -7,39 +7,9 @@
  * @param $newString
  */
 
-include($_SERVER['DOCUMENT_ROOT'] . '/wp-config.php');
+include($_SERVER['DOCUMENT_ROOT'] . 'wp-config.php');
 
 function epg_sql_table_replace($replaceString, $newString) {
-
-    /** Database */
-    $host       = "localhost";
-    $username   = DB_USER;
-    $password   = DB_PASSWORD;
-    $database   = DB_NAME;
-
-    // Connect to database server
-    mysql_connect($host, $username, $password);
-
-    // Select database
-    mysql_select_db($database);
-
-    // List all tables in database
-    $sql = "SHOW TABLES FROM " . $database;
-    $tables_result = mysql_query($sql);
-
-    if (!$tables_result) {
-        echo "Database error, could not list tables\n\nMySQL error: " . mysql_error();
-        exit;
-    }
-    echo '<h1>Tables in DB</h1>';
-    echo '<table>';
-    $i = 0; // $i is just for numbering the output, not really useful
-    while($row = mysql_fetch_array($sql))
-    {
-        echo '<tr><td>' . $i . '</td><td>' . $row['id'] . ' </td></td> : <td><td> ' . $row['name'] . '</td></tr>';
-        $i++;
-    }
-    echo '</tr></table>';
 
     echo "<h2>In these fields, <kbd>{$replaceString}</kbd> has been replaced with <kbd>{$newString}</kbd></h2>";
     $t = 0;
@@ -74,8 +44,6 @@ function epg_sql_table_replace($replaceString, $newString) {
 
     echo "$t changes made to the database";
 
-    mysql_free_result($tables_result);
-
 }
 
 $strings = array(
@@ -85,8 +53,43 @@ $strings = array(
     '1398366605405' => '1375818952736'
 );
 
+
+
+/** Database */
+$host       = "localhost";
+$username   = DB_USER;
+$password   = DB_PASSWORD;
+$database   = DB_NAME;
+
+// Connect to database server
+mysql_connect($host, $username, $password);
+
+// Select database
+mysql_select_db($database);
+
+// List all tables in database
+$sql = "SHOW TABLES FROM " . $database;
+$tables_result = mysql_query($sql);
+
+if (!$tables_result) {
+    echo "Database error, could not list tables\n\nMySQL error: " . mysql_error();
+    exit;
+}
+
+echo '<h1>Tables in DB</h1>';
+echo '<table>';
+$i = 0; // $i is just for numbering the output, not really useful
+while($row = mysql_fetch_array($sql))
+{
+    echo '<tr><td>' . $i . '</td><td>' . $row['id'] . ' </td></td> : <td><td> ' . $row['name'] . '</td></tr>';
+    $i++;
+}
+echo '</tr></table>';
+
 foreach ($strings as $new => $old){
 
     epg_sql_table_replace($old, $new);
 
 }
+
+mysql_free_result($tables_result);
