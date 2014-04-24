@@ -9,6 +9,9 @@
 
 include($_SERVER['DOCUMENT_ROOT'] . 'wp-config.php');
 
+echo $_SERVER['DOCUMENT_ROOT'];
+echo DB_USER;
+
 function epg_sql_table_replace($replaceString, $newString) {
 
     echo "<h2>In these fields, <kbd>{$replaceString}</kbd> has been replaced with <kbd>{$newString}</kbd></h2>";
