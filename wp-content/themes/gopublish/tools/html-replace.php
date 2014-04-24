@@ -9,9 +9,6 @@
 
 include($_SERVER['DOCUMENT_ROOT'] . 'wp-config.php');
 
-echo $_SERVER['DOCUMENT_ROOT'];
-echo DB_USER;
-
 function epg_sql_table_replace($replaceString, $newString) {
 
     echo "<h2>In these fields, <kbd>{$replaceString}</kbd> has been replaced with <kbd>{$newString}</kbd></h2>";
@@ -56,13 +53,11 @@ $strings = array(
     '1398366605405' => '1375818952736'
 );
 
-
-
 /** Database */
-$host       = "localhost";
+$database   = DB_NAME;
 $username   = DB_USER;
 $password   = DB_PASSWORD;
-$database   = DB_NAME;
+$host       = DB_HOST;
 
 // Connect to database server
 mysql_connect($host, $username, $password);
@@ -74,7 +69,7 @@ mysql_select_db($database);
 $sql = "SHOW TABLES FROM " . $database;
 $tables_result = mysql_query($sql);
 
-if (!$tables_result) {
+if (!$tables_result || $tables_result < 1) {
     echo "Database error, could not list tables\n\nMySQL error: " . mysql_error();
     exit;
 }
