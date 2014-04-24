@@ -130,53 +130,51 @@ if (window.attachEvent) window.attachEvent("onload", sfHover);
 
 
 <script type='text/javascript'>
-var googletag = googletag || {};
-googletag.cmd = googletag.cmd || [];
-(function() {
-var gads = document.createElement('script');
-gads.async = true;
-gads.type = 'text/javascript';
-var useSSL = 'https:' == document.location.protocol;
-gads.src = (useSSL ? 'https:' : 'http:') +
-'//www.googletagservices.com/tag/js/gpt.js';
-var node = document.getElementsByTagName('script')[0];
-node.parentNode.insertBefore(gads, node);
-})();
+    var googletag = googletag || {};
+    googletag.cmd = googletag.cmd || [];
+    (function() {
+        var gads = document.createElement('script');
+        gads.async = true;
+        gads.type = 'text/javascript';
+        var useSSL = 'https:' == document.location.protocol;
+        gads.src = (useSSL ? 'https:' : 'http:') +
+        '//www.googletagservices.com/tag/js/gpt.js';
+        var node = document.getElementsByTagName('script')[0];
+        node.parentNode.insertBefore(gads, node);
+    })();
 </script>
-
-
 
 <?php
 $sww_uri = strtolower($_SERVER["REQUEST_URI"]);
 $openxcode = "
 googletag.cmd.push(function() {
-googletag.defineSlot('/35190362/BIM_Wallpaper_2100x1600', [1883 , 1340], 'div-gpt-ad-1380637813856-0').addService(googletag.pubads());
-googletag.defineSlot('/35190362/BIM_ROS_160_SB1', [[120, 240], [125, 125], [120, 600], [160, 160], [160, 240], [160, 600]], 'div-gpt-ad-1375819015494-0').addService(googletag.pubads());
-googletag.defineSlot('/35190362/BIM_ROS_160_SB2', [[120, 240], [125, 125], [120, 600], [160, 160], [160, 240], [160, 600]], 'div-gpt-ad-1375819015494-1').addService(googletag.pubads());
-googletag.defineSlot('/35190362/BIM_ROS_160_SB3', [[120, 240], [125, 125], [120, 600], [160, 160], [160, 240], [160, 600]], 'div-gpt-ad-1375819015494-2').addService(googletag.pubads());
-googletag.defineSlot('/35190362/BIM_ROS_160_SB4', [[120, 240], [125, 125], [120, 600], [160, 160], [160, 240], [160, 600]], 'div-gpt-ad-1375819015494-3').addService(googletag.pubads());
-googletag.defineSlot('/35190362/BIM_ROS_160_SB5', [[120, 240], [125, 125], [120, 600], [160, 160], [160, 240], [160, 600]], 'div-gpt-ad-1375819015494-4').addService(googletag.pubads());
-googletag.defineSlot('/35190362/BIM_ROS_160_SB6', [[120, 240], [125, 125], [120, 600], [160, 160], [160, 240], [160, 600]], 'div-gpt-ad-1375819015494-5').addService(googletag.pubads());
-googletag.defineSlot('/35190362/BIM_ROS_160_SB7', [[120, 240], [125, 125], [120, 600], [160, 160], [160, 240], [160, 600]], 'div-gpt-ad-1375819015494-6').addService(googletag.pubads());
-googletag.defineSlot('/35190362/BIM_ROS_300_LR', [[234, 60], [300, 100], [300, 250]], 'div-gpt-ad-1375819015494-7').addService(googletag.pubads());
-googletag.defineSlot('/35190362/BIM_ROS_300_Mid', [[234, 60], [300, 100], [300, 250]], 'div-gpt-ad-1375819015494-8').addService(googletag.pubads());
-googletag.defineSlot('/35190362/BIM_ROS_300_Mid2', [[234, 60], [300, 100], [300, 250]], 'div-gpt-ad-1375819015494-9').addService(googletag.pubads());
-googletag.defineSlot('/35190362/BIM_ROS_300_UR', [[234, 60], [300, 100], [300, 250]], 'div-gpt-ad-1375819015494-10').addService(googletag.pubads());
-googletag.defineSlot('/35190362/BIM_ROS_Footerboard', [728, 90], 'div-gpt-ad-1375819015494-11').addService(googletag.pubads());
-googletag.defineSlot('/35190362/BIM_ROS_Leaderboard', [728, 90], 'div-gpt-ad-1375819015494-12').addService(googletag.pubads());
-googletag.defineSlot('/35190362/BIM_ROS_middle468', [468, 60], 'div-gpt-ad-1375819015494-13').addService(googletag.pubads());
-googletag.defineSlot('/35190362/BIM_ROS_middle468_2', [468, 60], 'div-gpt-ad-1375819015494-14').addService(googletag.pubads());
-googletag.defineSlot('/35190362/BIM_MDCE_Footer234', [234, 60], 'div-gpt-ad-1376000067932-0').addService(googletag.pubads());
-googletag.defineSlot('/35190362/BIM_MDCE_Footer468', [468, 60], 'div-gpt-ad-1376000067932-1').addService(googletag.pubads());
-googletag.defineSlot('/35190362/BIM_Targeted_ValvTect_125x250', [125, 250], 'div-gpt-ad-1377033861419-0').addService(googletag.pubads());
-googletag.pubads().collapseEmptyDivs();
-googletag.enableServices();
+    googletag.defineSlot('/35190362/BIM_Wallpaper_2100x1600', [1883 , 1340], 'div-gpt-ad-1380637813856-0').addService(googletag.pubads());
+    googletag.defineSlot('/35190362/BIM_ROS_160_SB1', [[120, 240], [125, 125], [120, 600], [160, 160], [160, 240], [160, 600]], 'div-gpt-ad-1398366141837-0').addService(googletag.pubads());
+    googletag.defineSlot('/35190362/BIM_ROS_160_SB2', [[120, 240], [125, 125], [120, 600], [160, 160], [160, 240], [160, 600]], 'div-gpt-ad-1398366141837-1').addService(googletag.pubads());
+    googletag.defineSlot('/35190362/BIM_ROS_160_SB3', [[120, 240], [125, 125], [120, 600], [160, 160], [160, 240], [160, 600]], 'div-gpt-ad-1398366141837-2').addService(googletag.pubads());
+    googletag.defineSlot('/35190362/BIM_ROS_160_SB4', [[120, 240], [125, 125], [120, 600], [160, 160], [160, 240], [160, 600]], 'div-gpt-ad-1398366141837-3').addService(googletag.pubads());
+    googletag.defineSlot('/35190362/BIM_ROS_160_SB5', [[120, 240], [125, 125], [120, 600], [160, 160], [160, 240], [160, 600]], 'div-gpt-ad-1398366141837-4').addService(googletag.pubads());
+    googletag.defineSlot('/35190362/BIM_ROS_160_SB6', [[120, 240], [125, 125], [120, 600], [160, 160], [160, 240], [160, 600]], 'div-gpt-ad-1398366141837-5').addService(googletag.pubads());
+    googletag.defineSlot('/35190362/BIM_ROS_160_SB7', [[120, 240], [125, 125], [120, 600], [160, 160], [160, 240], [160, 600]], 'div-gpt-ad-1398366141837-6').addService(googletag.pubads());
+    googletag.defineSlot('/35190362/BIM_ROS_300_LR', [[234, 60], [300, 100], [300, 250]], 'div-gpt-ad-1398366141837-7').addService(googletag.pubads());
+    googletag.defineSlot('/35190362/BIM_ROS_300_Mid', [[300, 100], [300, 250]], 'div-gpt-ad-1398366141837-8').addService(googletag.pubads());
+    googletag.defineSlot('/35190362/BIM_ROS_300_Mid2', [[300, 100], [300, 250]], 'div-gpt-ad-1398366141837-9').addService(googletag.pubads());
+    googletag.defineSlot('/35190362/BIM_ROS_300_UR', [[234, 60], [300, 100], [300, 250]], 'div-gpt-ad-1398366141837-10').addService(googletag.pubads());
+    googletag.defineSlot('/35190362/BIM_ROS_Footerboard', [728, 90], 'div-gpt-ad-1398366141837-11').addService(googletag.pubads());
+    googletag.defineSlot('/35190362/BIM_ROS_Leaderboard', [728, 90], 'div-gpt-ad-1398366141837-12').addService(googletag.pubads());
+    googletag.defineSlot('/35190362/BIM_ROS_middle468', [468, 60], 'div-gpt-ad-1398366141837-13').addService(googletag.pubads());
+    googletag.defineSlot('/35190362/BIM_ROS_middle468_2', [468, 60], 'div-gpt-ad-1398366141837-14').addService(googletag.pubads());
+    googletag.defineSlot('/35190362/BIM_MDCE_Footer234', [234, 60], 'div-gpt-ad-1376000067932-0').addService(googletag.pubads());
+    googletag.defineSlot('/35190362/BIM_MDCE_Footer468', [468, 60], 'div-gpt-ad-1376000067932-1').addService(googletag.pubads());
+    googletag.defineSlot('/35190362/BIM_Targeted_ValvTect_125x250', [125, 250], 'div-gpt-ad-1377033861419-0').addService(googletag.pubads());
+    googletag.pubads().collapseEmptyDivs();
+    googletag.enableServices();
 });
 ";
 
 if (strpos($sww_uri,'/top-100/') !== false)  {
-	$searchstr = "div-gpt-ad-1375819015494";
-	$replacestr = "div-gpt-ad-1375819230878";
+	$searchstr = "div-gpt-ad-1398366141837";
+	$replacestr = "div-gpt-ad-1398366494877";
 	$openxcode = str_ireplace($searchstr, $replacestr, $openxcode);
 
 	$searchstr = "BIM_ROS";
@@ -186,8 +184,8 @@ if (strpos($sww_uri,'/top-100/') !== false)  {
 
 
 if (strpos($sww_uri,'/mdce/') !== false || (strpos($sww_uri,'/category/marine-dealer-conference/') !== false)) {
-	$searchstr = "div-gpt-ad-1375819015494";
-	$replacestr = "div-gpt-ad-1375818952736";
+	$searchstr = "div-gpt-ad-1398366141837";
+	$replacestr = "div-gpt-ad-1398366605405";
 	$openxcode = str_ireplace($searchstr, $replacestr, $openxcode);
 
 	$searchstr = "BIM_ROS";

@@ -92,8 +92,8 @@ if ($instance['sidebarname']=="Ads Sidebar") {
 				$sww_uri = strtolower($_SERVER["REQUEST_URI"]);
 
 				if (strpos($sww_uri,'/top-100/') !== false)  {
-					$searchstr = "div-gpt-ad-1375819015494";
-					$replacestr = "div-gpt-ad-1375819230878";
+					$searchstr = "div-gpt-ad-1398366141837";
+					$replacestr = "div-gpt-ad-1398366494877";
 					$openxcode = str_ireplace($searchstr, $replacestr, $openxcode);
 
 					$searchstr = "BIM_ROS";
@@ -103,8 +103,8 @@ if ($instance['sidebarname']=="Ads Sidebar") {
 
 
 				if (strpos($sww_uri,'/mdce/') !== false || (strpos($sww_uri,'/category/marine-dealer-conference/') !== false)) {
-					$searchstr = "div-gpt-ad-1375819015494";
-					$replacestr = "div-gpt-ad-1375818952736";
+					$searchstr = "div-gpt-ad-1398366141837";
+					$replacestr = "div-gpt-ad-1398366605405";
 					$openxcode = str_ireplace($searchstr, $replacestr, $openxcode);
 
 					$searchstr = "BIM_ROS";
@@ -161,8 +161,8 @@ if ($instance['sidebarname']=="Ads Sidebar") {
 
 
 			if (strpos($sww_uri,'/top-100/') !== false)  {
-				$searchstr = "div-gpt-ad-1375819015494";
-				$replacestr = "div-gpt-ad-1375819230878";
+				$searchstr = "div-gpt-ad-1398366141837";
+				$replacestr = "div-gpt-ad-1398366494877";
 				$openxcode = str_ireplace($searchstr, $replacestr, $openxcode);
 
 				$searchstr = "BIM_ROS";
@@ -172,8 +172,8 @@ if ($instance['sidebarname']=="Ads Sidebar") {
 
 
 			if (strpos($sww_uri,'/mdce/') !== false || (strpos($sww_uri,'/category/marine-dealer-conference/') !== false)) {
-				$searchstr = "div-gpt-ad-1375819015494";
-				$replacestr = "div-gpt-ad-1375818952736";
+				$searchstr = "div-gpt-ad-1398366141837";
+				$replacestr = "div-gpt-ad-1398366605405";
 				$openxcode = str_ireplace($searchstr, $replacestr, $openxcode);
 
 				$searchstr = "BIM_ROS";
