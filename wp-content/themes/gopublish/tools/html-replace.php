@@ -40,7 +40,7 @@ function epg_sql_table_replace($tables, $replaceString, $newString) {
                     echo '<tr>';
                     echo '<td style="padding-right:10px;">' . $field['Field'] . '</td>';
                     $sql = "UPDATE " . $table[0] .
-                        " SET " . $field['Field'] . " = replace(" . $field['Field'] . ", '$string_to_replace', '$newString')";
+                        " SET " . $field['Field'] . " = replace(" . $field['Field'] . ", '$replaceString', '$newString')";
                     mysql_query($sql);
                     echo '<td>' . mysql_affected_rows() . ' records updated.</td>';
                     echo '</tr>';
@@ -66,19 +66,15 @@ $strings = array(
 );
 
 /** Database */
-$database   = DB_NAME;
-$username   = DB_USER;
-$password   = DB_PASSWORD;
-$host       = DB_HOST;
 
 // Connect to database server
-mysql_connect($host, $username, $password);
+mysql_connect(DB_HOST, DB_USER, DB_PASSWORD);
 
 // Select database
-mysql_select_db($database);
+mysql_select_db(DB_NAME);
 
 // List all tables in database
-$sql = "SHOW TABLES FROM " . $database;
+$sql = "SHOW TABLES FROM " . DB_NAME;
 $tables_result = mysql_query($sql);
 
 if (!$tables_result || $tables_result < 1) {
@@ -89,7 +85,7 @@ if (!$tables_result || $tables_result < 1) {
 echo '<h1>Tables in DB</h1>';
 echo '<table>';
 $i = 0; // $i is just for numbering the output, not really useful
-while($row = mysql_fetch_array($sql))
+while($row = mysql_fetch_array($tables_result))
 {
     echo '<tr><td>' . $i . '</td><td>' . $row['id'] . ' </td></td> : <td><td> ' . $row['name'] . '</td></tr>';
     $i++;
