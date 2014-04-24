@@ -11,6 +11,27 @@ include($_SERVER['DOCUMENT_ROOT'] . '/wp-config.php');
 
 function epg_sql_table_replace($replaceString, $newString) {
 
+    /** Database */
+    $host       = "localhost";
+    $username   = DB_USER;
+    $password   = DB_PASSWORD;
+    $database   = DB_NAME;
+
+    // Connect to database server
+    mysql_connect($host, $username, $password);
+
+    // Select database
+    mysql_select_db($database);
+
+    // List all tables in database
+    $sql = "SHOW TABLES FROM " . $database;
+    $tables_result = mysql_query($sql);
+
+    if (!$tables_result) {
+        echo "Database error, could not list tables\n\nMySQL error: " . mysql_error();
+        exit;
+    }
+
     echo "<h2>In these fields, <kbd>{$replaceString}</kbd> has been replaced with <kbd>{$newString}</kbd></h2>";
     $t = 0;
     while ($table = mysql_fetch_row($replaceString)) {
@@ -44,12 +65,10 @@ function epg_sql_table_replace($replaceString, $newString) {
 
     echo "$t changes made to the database";
 
+    mysql_free_result($tables_result);
+    
 }
 
-$host       = "localhost";
-$username   = DB_USER;
-$password   = DB_PASSWORD;
-$database   = DB_NAME;
 $strings = array(
     // 'newstring'  => 'oldstring'
     '1398366141837' => '1375819015494',
@@ -57,25 +76,8 @@ $strings = array(
     '1398366605405' => '1375818952736'
 );
 
-// Connect to database server
-mysql_connect($host, $username, $password);
-
-// Select database
-mysql_select_db($database);
-
-// List all tables in database
-$sql = "SHOW TABLES FROM " . $database;
-$tables_result = mysql_query($sql);
-
-if (!$tables_result) {
-    echo "Database error, could not list tables\n\nMySQL error: " . mysql_error();
-    exit;
-}
-
 foreach ($strings as $new => $old){
 
     epg_sql_table_replace($old, $new);
 
 }
-
-mysql_free_result($tables_result);
