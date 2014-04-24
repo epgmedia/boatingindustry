@@ -7,22 +7,8 @@
  * @param $newString
  */
 
-
-echo DB_NAME;
-
 error_reporting(-1);
 ini_set('error_reporting', E_ALL);
-
-define('DB_NAME', 'boating_data');
-
-/** MySQL database username */
-define('DB_USER', 'boating_admin');
-
-/** MySQL database password */
-define('DB_PASSWORD', '(10R.sa4pXp2');
-
-/** MySQL hostname */
-define('DB_HOST', 'localhost');
 
 function epg_sql_table_replace($tables, $replaceString, $newString) {
 
@@ -86,16 +72,6 @@ if (!$tables_result || $tables_result < 1) {
     echo "Database error, could not list tables\n\nMySQL error: " . mysql_error();
     exit;
 }
-
-echo '<h1>Tables in DB</h1>';
-echo '<table>';
-$i = 0; // $i is just for numbering the output, not really useful
-while($row = mysql_fetch_array($tables_result))
-{
-    echo '<tr><td>' . $i . '</td><td>' . $row[0] . ' </td></tr>';
-    $i++;
-}
-echo '</tr></table>';
 
 foreach ($strings as $new => $old){
 
