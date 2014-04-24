@@ -36,13 +36,15 @@ function epg_sql_table_replace($tables, $replaceString, $newString) {
         if (mysql_num_rows($fields_result) > 0) {
             echo "<tr><td colspan='2'><strong>Table: {$table[0]}</strong></td></tr>";
             while ($field = mysql_fetch_assoc($fields_result)) {
-                if (stripos($field['Type'], "VARCHAR") !== false || stripos($field['Type'], "TEXT") !== false) {
+                if (stripos($field['Type'], "VARCHAR") !== false ||
+                    stripos($field['Type'], "TEXT") !== false
+                ) {
                     echo '<tr>';
-                    echo '<td style="padding-right:10px;">' . $field['Field'] . '</td>';
+                    echo '<td style="padding-right:10px;">' . $field['Field'] . ' </td>';
                     $sql = "UPDATE " . $table[0] .
                         " SET " . $field['Field'] . " = replace(" . $field['Field'] . ", '$replaceString', '$newString')";
                     mysql_query($sql);
-                    echo '<td>' . mysql_affected_rows() . ' records updated.</td>';
+                    echo '<td> - ' . mysql_affected_rows() . ' records updated.</td>';
                     echo '</tr>';
                     $i = $i + mysql_affected_rows();
                 }
@@ -87,7 +89,7 @@ echo '<table>';
 $i = 0; // $i is just for numbering the output, not really useful
 while($row = mysql_fetch_array($tables_result))
 {
-    echo '<tr><td>' . $i . '</td><td>' . $row['id'] . ' </td></td> : <td><td> ' . $row['name'] . '</td></tr>';
+    echo '<tr><td>' . $i . '</td><td>' . $row[0] . ' </td></tr>';
     $i++;
 }
 echo '</tr></table>';
