@@ -11,6 +11,8 @@ include(TEMPLATEPATH."/tools/categorywidget.php");
 include(TEMPLATEPATH."/tools/productshowcase.php");
 include(TEMPLATEPATH."/tools/pagewidget.php");
 
+include(get_template_directory() . "/inc/theme-functions.php");
+
 add_option("home_left_column", '280', '', 'yes');
 add_option("home_center_column", '280', '', 'yes');
 add_option("home_right_column", '300', '', 'yes');
