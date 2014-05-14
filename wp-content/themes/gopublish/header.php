@@ -1,3 +1,7 @@
+<?php
+ini_set(’zlib.output_compression’, ‘On’);
+ini_set(’zlib.output_compression_level’, ‘1′);
+?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head profile="http://gmpg.org/xfn/11">
@@ -161,13 +165,13 @@ googletag.cmd.push(function() {
     googletag.defineSlot('/35190362/BIM_ROS_300_Mid2', [[300, 100], [300, 250]], 'div-gpt-ad-1398366141837-9').addService(googletag.pubads());
     googletag.defineSlot('/35190362/BIM_ROS_300_UR', [[234, 60], [300, 100], [300, 250]], 'div-gpt-ad-1398366141837-10').addService(googletag.pubads());
     googletag.defineSlot('/35190362/BIM_ROS_Footerboard', [728, 90], 'div-gpt-ad-1398366141837-11').addService(googletag.pubads());
-    googletag.defineSlot('/35190362/BIM_ROS_Leaderboard', [728, 90], 'div-gpt-ad-1398366141837-12').addService(googletag.pubads());
+    googletag.defineSlot('/35190362/BIM_ROS_Leaderboard', [728, 90], 'div-gpt-ad-1398366141837-12').addService(googletag.pubads()).setCollapseEmptyDiv(false);
     googletag.defineSlot('/35190362/BIM_ROS_middle468', [468, 60], 'div-gpt-ad-1398366141837-13').addService(googletag.pubads());
     googletag.defineSlot('/35190362/BIM_ROS_middle468_2', [468, 60], 'div-gpt-ad-1398366141837-14').addService(googletag.pubads());
     googletag.defineSlot('/35190362/BIM_MDCE_Footer234', [234, 60], 'div-gpt-ad-1376000067932-0').addService(googletag.pubads());
     googletag.defineSlot('/35190362/BIM_MDCE_Footer468', [468, 60], 'div-gpt-ad-1376000067932-1').addService(googletag.pubads());
     googletag.defineSlot('/35190362/BIM_Targeted_ValvTect_125x250', [125, 250], 'div-gpt-ad-1377033861419-0').addService(googletag.pubads());
-    googletag.pubads().collapseEmptyDivs();
+    googletag.pubads().collapseEmptyDivs(true);
     googletag.enableServices();
 });
 ";
