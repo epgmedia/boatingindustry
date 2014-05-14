@@ -11,7 +11,7 @@ define( 'TC_INC_URL', plugin_dir_url( __FILE__ ) );
  * Call Tablecloth with class "table-cloth" applied to table
  */
 function table_cloth_tables() {
-    if ( is_page_template( 'page-table-cloth.php' ) ) {
+    if ( is_page_template( 'inc/page-table-cloth.php' ) ) {
         /** Call enqueue */
         wp_enqueue_style( 'table-cloth-css', TC_INC_URL . "/css/tablecloth.css" );
         wp_enqueue_script( 'table-cloth-js', TC_INC_URL . "/js/tablecloth.js" );
