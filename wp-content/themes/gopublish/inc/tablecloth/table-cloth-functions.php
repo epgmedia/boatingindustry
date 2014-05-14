@@ -3,8 +3,8 @@
  * Functions for Table Cloth CSS/JS
  */
 
-define( 'TC_INC_URL', get_template_directory_uri() . 'inc/tablecloth/' );
-define( 'TC_INC_PATH', get_template_directory() . 'inc/tablecloth/' );
+define( 'TC_INC_URL', get_template_directory_uri() . '/inc/tablecloth/' );
+define( 'TC_INC_PATH', get_template_directory() . '/inc/tablecloth/' );
 
 /**
  * Add table cloth to page templates.
