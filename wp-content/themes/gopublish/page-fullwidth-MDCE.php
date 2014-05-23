@@ -36,9 +36,9 @@ Template Name: Full Width - MDCE
 googletag.cmd.push(function() { googletag.display('div-gpt-ad-1376000067932-17'); });
 </script></div></td>
     <td><!-- BIM_MDCE_Footer234 -->
-<div id='div-gpt-ad-1376000067932-18' style='width:234px; height:60px;'>
+<div id='div-gpt-ad-1376000067932-16' style='width:234px; height:60px;'>
 <script type='text/javascript'>
-googletag.cmd.push(function() { googletag.display('div-gpt-ad-1376000067932-18'); });
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1376000067932-16'); });
 </script></div></td>
   </tr>
 </table>
