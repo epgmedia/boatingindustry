@@ -170,6 +170,7 @@ googletag.cmd.push(function() {
     googletag.defineSlot('/35190362/BIM_ROS_middle468_2', [468, 60], 'div-gpt-ad-1398366141837-14').addService(googletag.pubads());
     googletag.defineSlot('/35190362/BIM_MDCE_Footer234', [234, 60], 'div-gpt-ad-1376000067932-0').addService(googletag.pubads());
     googletag.defineSlot('/35190362/BIM_MDCE_Footer468', [468, 60], 'div-gpt-ad-1376000067932-1').addService(googletag.pubads());
+	googletag.defineSlot('/35190362/BIM_T100_Footer234', [234, 60], 'div-gpt-ad-1398366494877-0').addService(googletag.pubads());
     googletag.defineSlot('/35190362/BIM_Targeted_ValvTect_125x250', [125, 250], 'div-gpt-ad-1377033861419-0').addService(googletag.pubads());
     googletag.pubads().collapseEmptyDivs(true);
     googletag.enableServices();

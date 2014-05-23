@@ -43,10 +43,10 @@ Template Name: Full Width - Top 100
 
                     <td>
                         <!-- BIM_T100_middle468 -->
-                        <div id='div-gpt-ad-1398366494877-14' style='width:468px; height:60px;'>
+                        <div id='div-gpt-ad-1398366494877-13' style='width:468px; height:60px;'>
 
                             <script type='text/javascript'>
-                                googletag.cmd.push(function() { googletag.display('div-gpt-ad-1398366494877-14'); });
+                                googletag.cmd.push(function() { googletag.display('div-gpt-ad-1398366494877-13'); });
                             </script>
 
                         </div>
@@ -54,10 +54,10 @@ Template Name: Full Width - Top 100
                     </td>
                     <td>
                         <!-- BIM_T100_Footer234 -->
-                        <div id='div-gpt-ad-1398366494877-11' style='width:234px; height:60px;'>
+                        <div id='div-gpt-ad-1398366494877-0' style='width:234px; height:60px;'>
 
                             <script type='text/javascript'>
-                                googletag.cmd.push(function() { googletag.display('div-gpt-ad-1398366494877-11'); });
+                                googletag.cmd.push(function() { googletag.display('div-gpt-ad-1398366494877-0'); });
                             </script>
 
                         </div>
