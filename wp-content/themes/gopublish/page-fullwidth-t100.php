@@ -54,10 +54,10 @@ Template Name: Full Width - Top 100
                     </td>
                     <td>
                         <!-- BIM_T100_Footer234 -->
-                        <div id='div-gpt-ad-1398366494877-0' style='width:234px; height:60px;'>
+                        <div id='div-gpt-ad-1398366494877-18' style='width:234px; height:60px;'>
 
                             <script type='text/javascript'>
-                                googletag.cmd.push(function() { googletag.display('div-gpt-ad-1398366494877-0'); });
+                                googletag.cmd.push(function() { googletag.display('div-gpt-ad-1398366494877-18'); });
                             </script>
 
                         </div>

@@ -31,14 +31,14 @@ Template Name: Full Width - MDCE
 <table width="900" border="0" cellspacing="5" cellpadding="0">
   <tr>
     <td><!-- BIM_MDCE_Footer468 -->
-<div id='div-gpt-ad-1376000067932-1' style='width:468px; height:60px;'>
+<div id='div-gpt-ad-1376000067932-17' style='width:468px; height:60px;'>
 <script type='text/javascript'>
-googletag.cmd.push(function() { googletag.display('div-gpt-ad-1376000067932-1'); });
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1376000067932-17'); });
 </script></div></td>
     <td><!-- BIM_MDCE_Footer234 -->
-<div id='div-gpt-ad-1376000067932-0' style='width:234px; height:60px;'>
+<div id='div-gpt-ad-1376000067932-18' style='width:234px; height:60px;'>
 <script type='text/javascript'>
-googletag.cmd.push(function() { googletag.display('div-gpt-ad-1376000067932-0'); });
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1376000067932-18'); });
 </script></div></td>
   </tr>
 </table>
