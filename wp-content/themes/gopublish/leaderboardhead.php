@@ -1,55 +1,66 @@
-<?php if (get_theme_mod('display-leader')=="Yes") { ?>
+<?php if ( get_theme_mod( 'display-leader' ) == "Yes" ) { ?>
 
 	<div id="leaderboard">
-<!-- 
-	<div id="leaderboardright">
 
-		 <?php $leaderurlsmall=get_theme_mod('leader-url-small'); $leaderimagesmall=get_theme_mod('leader-image-small');
-		 if ($leaderurlsmall) echo '<a target="_blank" href="'.$leaderurlsmall.'">'; if ($leaderimagesmall) echo '<img src="'.$leaderimagesmall.'" class="leaderimageright" />'; if ($leaderurlsmall) echo '</a>'; ?>
+	<?php if ( get_theme_mod( 'leaderad-type' ) == "Static Image" ) {
 
-	</div> -->
+		$leaderurl   = get_theme_mod( 'leader-url' );
+		$leaderimage = get_theme_mod( 'leader-image' );
 
-	<?php if (get_theme_mod('leaderad-type')=="Static Image") {
+		if ( NULL !== $leaderurl ) { ?>
 
-		 $leaderurl=get_theme_mod('leader-url'); $leaderimage=get_theme_mod('leader-image');
-		 if ($leaderurl) echo '<a target="_blank" href="'.$leaderurl.'">'; if ($leaderimage) echo '<img src="'.$leaderimage.'" class="leaderimage" />'; if ($leaderurl) echo '</a>';
+			<a target="_blank" href="<?php echo $leaderurl; ?>">
 
-	 } else if (get_theme_mod('leaderad-type')=="Ad Tag") {
-		echo '<div class="leaderboardleft">';
+		<?php }
+
+		if ( NULL !== $leaderimage ) { ?>
+
+			<img src="<?php echo $leaderimage; ?>" class="leaderimage" />
+
+		<?php }
+
+		if (NULL !== $leaderurl ) { ?>
+
+			</a>
+
+		<?php }
+
+	} else if ( get_theme_mod( 'leaderad-type' ) == "Ad Tag" ) {
 
 		//SWW Mod to target ads for Top 100 & MDCE sections
 		$openxcode = get_theme_mod('openx-code');
-		$sww_uri = strtolower($_SERVER["REQUEST_URI"]);
+		$sww_uri   = strtolower($_SERVER["REQUEST_URI"]);
 
-		if (strpos($sww_uri,'/top-100/') !== false)  {
-			$searchstr = "div-gpt-ad-1398366141837";
+		if ( strpos( $sww_uri,'/top-100/' ) !== false )  {
+			$searchstr  = "div-gpt-ad-1398366141837";
 			$replacestr = "div-gpt-ad-1398366494877";
-			$openxcode = str_ireplace($searchstr, $replacestr, $openxcode);
+			$openxcode  = str_ireplace($searchstr, $replacestr, $openxcode);
 
-			$searchstr = "BIM_ROS";
+			$searchstr  = "BIM_ROS";
 			$replacestr = "BIM_T100";
-			$openxcode = str_ireplace($searchstr, $replacestr, $openxcode);
+			$openxcode  = str_ireplace($searchstr, $replacestr, $openxcode);
 		}
 
-
-		if (strpos($sww_uri,'/mdce/') !== false || (strpos($sww_uri,'/category/marine-dealer-conference/') !== false)) {
-			$searchstr = "div-gpt-ad-1398366141837";
+		if (
+			strpos( $sww_uri,'/mdce/' ) !== false ||
+			strpos( $sww_uri,'/category/marine-dealer-conference/' ) !== false
+		) {
+			$searchstr  = "div-gpt-ad-1398366141837";
 			$replacestr = "div-gpt-ad-1398366605405";
-			$openxcode = str_ireplace($searchstr, $replacestr, $openxcode);
+			$openxcode  = str_ireplace($searchstr, $replacestr, $openxcode);
 
-			$searchstr = "BIM_ROS";
+			$searchstr  = "BIM_ROS";
 			$replacestr = "BIM_MDCE";
-			$openxcode = str_ireplace($searchstr, $replacestr, $openxcode);
+			$openxcode  = str_ireplace($searchstr, $replacestr, $openxcode);
 		}
+		?>
 
-		echo $openxcode;
-		echo '</div>';
+		<div class="leaderboardAd">
+			<?php echo $openxcode; ?>
+		</div>
 
-		//SWW Mod - commented original code below
-		//echo get_theme_mod('openx-code');
+	<?php } ?>
 
-	 } ?>
 	</div>
-
 
 <?php } ?>

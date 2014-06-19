@@ -1,0 +1,144 @@
+@charset "UTF-8";
+
+/*********************************************
+* Admin
+*********************************************/
+
+#wpadminbar #wp-admin-bar-epg-media-link > .ab-item:before {
+	top: 2px;
+	content: "\f319";
+}
+
+.epg-widget-options-left {
+	float: left;
+	width: 230px;
+	margin-right: 20px;
+	border-right: 1px solid #aaaaaa;
+	padding-right: 10px;
+}
+
+.epg-widget-options {
+	float: left;
+	width: 210px;
+}
+
+.widgets-holder-wrap select {
+	max-width: 100%;
+}
+
+#sno_announcements h3 {
+	background: #990000;
+	color: #ffffff;
+	text-shadow: none;
+}
+
+#sno_announcements {
+	border-color: #990000;
+	-moz-box-shadow: 1px 1px 5px #888;
+	-webkit-box-shadow: 1px 1px 5px #888;
+	box-shadow: 1px 1px 5px #888;
+}
+
+#sno_announcements a {
+	color: #990000;
+}
+
+#sno_announcements a:hover {
+	color: #990000;
+	text-decoration: underline;
+}
+
+.sno_options_page .postbox {
+	border: 1px solid #777777;
+	-moz-box-shadow: 1px 1px 5px #888;
+	-webkit-box-shadow: 1px 1px 5px #888;
+	box-shadow: 1px 1px 5px #888;
+}
+
+.sno_options_page h3, .sno_options_page h3:hover {
+	background: #777777;
+	color: #ffffff;
+	text-shadow: none;
+	cursor: default;
+}
+
+.sno_options_page .divline {
+	clear: both;
+	border-top: 1px solid #888888;
+	margin: 25px 0;
+}
+
+.sno_options_page p {
+	margin: 0 0 1em 0
+}
+
+#snocolorpicker {
+	position: fixed;
+	border: 1px solid #aaaaaa;
+}
+
+input.save-button {
+	position: fixed;
+	margin-top: 240px;
+	margin-left: 15px;
+	font-size: 18px !important;
+}
+
+.optionsbox {
+	padding: 10px;
+	border: 1px solid #aaaaaa;
+	background: #ffffff;
+	width: 260px;
+	float: left;
+	margin-right: 10px;
+}
+
+.optionsboxright {
+	padding: 10px;
+	border: 1px solid #aaaaaa;
+	background: #ffffff;
+	width: 260px;
+	float: left;
+}
+
+.headingtext {
+	font-weight: bold;
+	font-size: 14px;
+}
+
+.glossymenu {
+	margin: 5px 0;
+	padding: 0;
+	border: 1px solid #cccccc;
+	border-bottom-width: 0;
+}
+
+.glossymenu a.menuitem {
+	background: black url(/wp-content/themes/gopublish/images/glossyback.gif) repeat-x bottom left;
+	font: 18px "Lucida Grande", "Trebuchet MS", Verdana, Helvetica, sans-serif;
+	color: white;
+	display: block;
+	position: relative;
+	width: auto;
+	padding: 6px 0;
+	padding-left: 10px;
+	text-decoration: none;
+}
+
+.glossymenu a.menuitem:visited, .glossymenu .menuitem:active {
+	color: white;
+}
+
+.glossymenu a.menuitem .statusicon {
+	margin-right: 10px;
+	border: none;
+}
+
+.glossymenu a.menuitem:hover {
+	background-image: url(/wp-content/themes/gopublish/images/glossyback2.gif);
+}
+
+.glossymenu div.submenu {
+	padding: 10px 10px 10px 10px;
+	background: #f5f5f5;
+}

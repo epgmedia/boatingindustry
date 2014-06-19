@@ -1,0 +1,523 @@
+#pagetop {
+	height: 10px !important;
+}
+
+#leaderboard {
+	background: none !important
+}
+
+#leaderboardfooter {
+	background-color: #ffffff !important;
+}
+
+#breakingnews {
+	background-color: #ffffff !important;
+	color: #990000 !important;
+}
+
+#breakingnews a {
+	color: #990000 !important;
+}
+
+.breakingnewsheadline {
+	color: #990000 !important;
+}
+
+#breakingnews, #navbar {
+	border-bottom: 1px solid #aaaaaa !important;
+}
+
+#navbar {
+	border-top: 1px solid #aaaaaa !important;
+}
+
+.logo {
+	width:701px;
+	height:100px;
+}
+
+a, a:visited {
+	color: #2255aa;
+}
+
+a:hover {
+	color: #2255aa;
+}
+
+a h3.homeheadline, a.homeheadline {
+	color: #2255aa !important;
+}
+
+a:hover h3.homeheadline {
+	color: #2255aa !important;
+	text-decoration: underline !important;
+}
+
+a:hover p.viewall, a:hover p.sectionhead {
+	text-decoration: underline;
+}
+
+body {
+	background-color : #ffffff !important;
+}
+
+#footer {
+	background-color: #ffffff !important;
+	border-top: 5px solid #393939 !important;
+}
+
+#header {
+	padding-left:0;
+	width:960px;
+	height: 100px !important
+}
+
+#header h1, #header p {
+	color: #dddddd !important;
+}
+
+#navbar, #navbar a, #nav li li a, #nav li li a:link, #nav li li a:visited {
+	background-color: #ffffff !important;
+	color: #000000 !important;
+}
+
+#navbar a:hover, #nav li li a:hover, #nav li li a:active {
+	background-color: #393939 !important;
+	color: #ffffff !important;
+}
+
+#subnavbar {
+	background-color: #393939 !important;
+	color: #ffffff !important;
+}
+
+#subnav a {
+	background-color: #393939 !important;
+	color: #ffffff !important;
+}
+
+.subnavbarright a {
+	color: #ffffff !important;
+}
+
+#subnav a:hover {
+	background-color: #ffffff !important;
+	color: #000000 !important;
+}
+
+#subnav li li a, #subnav li li a:link, #subnav li li a:visited {
+	background-color: #393939 !important;
+	color: #ffffff !important;
+}
+
+#subnav li li a:hover, #subnav li li a:active {
+	color: #000000 !important;
+	background-color: #ffffff !important;
+}
+
+.teasergrade {
+	color: #2255aa !important;
+}
+
+#content h5 {
+	color: #ffffff !important;
+}
+
+table.stats th:hover {
+	color: #ffffff !important;
+}
+
+.teasertitle {
+	color: #2255aa !important;
+}
+
+#pscroller3 a {
+	color: #2255aa !important;
+}
+
+.newsticker-jcarousellite .sportsscore span.cat {
+	color: #2255aa !important;
+}
+
+#header {
+	background-image: none !important;
+	background-color: none !important;
+}
+
+
+.headerleft a {
+	color: #dddddd !important;
+}
+
+#footer p, #footer a {
+	color: #000000 !important;
+}
+
+#tagline li li a, #tagline li li a:link, #tagline li li a:visited {
+	background: #393939 !important;
+	color: #ffffff !important;
+}
+
+#tagline a:hover, #tagline li a:hover {
+	background: #393939 !important;
+	color: #ffffff !important;
+}
+
+#tagline li li a:hover, #tagline li li a:active {
+	background: #ffffff !important;
+	color: #000000 !important;
+}
+
+.wp-polls .pollbar {
+	background: #393939;
+	border: 1px solid #393939;
+}
+
+.postarea {
+	border: none !important;
+}
+
+h3.gform_title {
+	background: #ffffff !important;
+	padding-left: 7px !important;
+}
+
+.innerwrap {
+	background: #ffffff !important;
+	background-image: none !important;
+}
+
+.homebottomleft ul li, #homepageright ul li, #homepageleft ul li, #homepagewide ul li, #contentleft ul li, #sidebar ul li, #sidebar ul li li, #sidebar ul li ul li {
+	background: url(http://www.boatingindustry.com/wp-content/uploads/2011/09/Circle.png) no-repeat 0px 2px;
+}
+
+
+/* widget header styles for SNO widgets */
+
+h4.widget1 {
+	background: #2255aa url(http://cgerber-epg.ad.epgmediallc.com/boatingindustry/wp-content/themes/gopublish/images/navbg.png) repeat-x !important;
+	background-color: #2255aa !important;
+	color: #ffffff !important;
+	border-left: 1px solid #cccccc !important;
+	border-right: 1px solid #cccccc !important;
+	border-top: 1px solid #cccccc !important;
+	font-weight: normal !important;
+	padding-left: 10px !important;
+	font-size: 17px !important;
+	line-height: 26px !important;
+	margin: 0px !important;
+}
+
+h4.widget1 a {
+	color: #ffffff !important;
+}
+
+h4.widget2 {
+	background: #2255aa url(http://cgerber-epg.ad.epgmediallc.com/boatingindustry/wp-content/themes/gopublish/images/navbg.png) repeat-x !important;
+	background-color: #2255aa !important;
+	color: #ffffff !important;
+	padding-left: 10px !important;
+	font-size: 17px !important;
+	line-height: 26px !important;
+	margin: 0px !important;
+	font-weight: normal !important;
+}
+
+h4.widget2 a {
+	color: #ffffff !important;
+}
+
+h4.widget3, .adheader {
+	background: #2255aa url(http://cgerber-epg.ad.epgmediallc.com/boatingindustry/wp-content/themes/gopublish/images/navbg.png) repeat-x !important;
+	background-color: #2255aa !important;
+	color: #ffffff !important;
+	text-transform: uppercase !important;
+	font-size: 10px !important;
+	padding-top: 0px !important;
+	text-align: center !important;
+	line-height: 15px !important;
+	margin: 0px !important;
+	font-weight: normal !important;
+}
+
+h4.widget3 a {
+	color: #ffffff !important;
+}
+
+h4.widget4 {
+	text-transform: uppercase;
+	font-size: 12px;
+	background: #2255aa url(http://cgerber-epg.ad.epgmediallc.com/boatingindustry/wp-content/themes/gopublish/images/navbg.png) repeat-x !important;
+	color: #ffffff !important;
+	line-height: 26px !important;
+	font-weight: normal !important;
+	padding: 0px 10px !important;
+}
+
+h4.widget4 a {
+	color: #ffffff !important;
+}
+
+h4.widget5 {
+	background-image: none !important;
+	border-top: 10px solid #2255aa;
+	background-color: #ffffff !important;
+	color: #000000 !important;
+	padding-left: 10px !important;
+	font-size: 17px !important;
+	line-height: 26px !important;
+	font-weight: bold !important;
+}
+
+h4.widget5 a {
+	color: #000000 !important;
+}
+
+h4.widget6 {
+	background: #2255aa url(http://cgerber-epg.ad.epgmediallc.com/boatingindustry/wp-content/themes/gopublish/images/navbg.png) repeat-x !important;
+	border: 1px solid #aaaaaa !important;
+	background-color: #dddddd !important;
+	color: #2255aa !important;
+	padding-left: 10px !important;
+	font-size: 17px !important;
+	line-height: 26px !important;
+	font-weight: normal !important;
+}
+
+h4.widget6 a {
+	color: #2255aa !important;
+}
+
+h4.widget7 {
+	color: #ffffff !important;
+	background: #aaaaaa !important;
+	border-bottom: 5px solid #2255aa !important;
+	padding-left: 10px !important;
+	font-size: 17px !important;
+	line-height: 26px !important;
+	font-weight: normal !important;
+}
+
+h4.widget7 a {
+	color: #ffffff !important;
+}
+
+/* widget body styles for SNO widgets */
+
+.widgetbody1 {
+	border-left: 1px solid #cccccc;
+	border-right: 1px solid #cccccc;
+	border-bottom: 1px solid #cccccc;
+	background-color: #ffffff;
+	margin-bottom: 10px;
+	padding: 10px;
+	overflow: hidden;
+}
+
+.widgetbody2 {
+	border-left: 1px solid #cccccc;
+	border-right: 1px solid #cccccc;
+	border-bottom: 1px solid #cccccc;
+	background-color: #ffffff;
+	margin-bottom: 10px;
+	padding: 10px;
+	overflow: hidden;
+}
+
+.widgetbody3 {
+	border-right: 0px solid #cccccc;
+	border-left: 0px solid #cccccc;
+	background-color: #eeeeee;
+	padding: 10px;
+	overflow: hidden;
+}
+
+.widgetfooter3 {
+	background: #2255aa url(http://cgerber-epg.ad.epgmediallc.com/boatingindustry/wp-content/themes/gopublish/images/navbg.png) repeat-x !important;
+	margin-bottom: 10px;
+	height: 15px;
+	width: 100%;
+	display: block;
+	background-color: #2255aa;
+}
+
+.widgetbody4 {
+	border-left:  solid #cccccc;
+	border-right:  solid #cccccc;
+	border-bottom:  solid #cccccc;
+	background-color: #ffffff;
+	margin-bottom: 10px;
+	padding: 10px;
+	clear: both;
+	overflow: hidden;
+}
+
+.widgetbody5 {
+	border-bottom: 1px solid #aaaaaa;
+	background-color: #ffffff;
+	margin-bottom: 10px;
+	padding: 10px;
+	overflow: hidden;
+}
+
+.widgetbody6 {
+	border-left: 1px solid #aaaaaa;
+	border-right: 1px solid #aaaaaa;
+	border-bottom: 1px solid #aaaaaa;
+	background-color: #eeeeee;
+	margin-bottom: 10px;
+	padding: 10px;
+	overflow: hidden;
+}
+
+.widgetbody7 {
+	background-color: #eeeeee;
+	margin-bottom: 10px;
+	padding: 10px;
+	overflow: hidden;
+}
+
+/* styles for widgets not included with theme */
+
+
+#homepageleft h2, #homepageright h2, #homepage h2, #sidebar h2 {
+	background-color: #2255aa !important;
+	color: #ffffff !important;
+	border-left: 1px solid #cccccc !important;
+	border-right: 1px solid #cccccc !important;
+	border-top: 1px solid #cccccc !important;
+}
+
+.widgetbody, #permalinksidebar, .comments, .homecolumnwide {
+	border-left: 1px solid #cccccc !important;
+	border-right: 1px solid #cccccc !important;
+	border-bottom: 1px solid #cccccc !important;
+	background-color: #ffffff !important;
+}
+
+#homepage h2 a, #sidebar h2 a, #content h2 a {
+	color: #ffffff !important;
+}
+
+
+#permalinksidebar h2 {
+	color: #000000 !important;
+	background: none !important;
+	border: none !important;
+	font-size: 14px !important;
+	line-height: 20px !important;
+}
+
+
+.insert {
+	width: 591px;
+	height: 90px;
+	background: #000000;
+	color: #ffffff;
+	padding: 0px 10px;
+	line-height: 1.2em;
+	opacity: 0.7;
+	filter: alpha(opacity=70);
+	position: absolute;
+	top: 220px;
+	left: 0px overflow : hidden;
+}
+
+.insert h2 {
+	line-height: 1em;
+	font-size: 22px;
+	font-weight: normal;
+	margin: 0 0 10px 0;
+}
+
+.insert a:link, .insert a:visited {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+.insert a:hover {
+	text-decoration: underline;
+}
+
+.insert h3 a, .insert h3 a:visited {
+	color: #ffffff !important;
+	font-size: 16px !important;
+	line-height: 24px !important;
+}
+
+#slider {
+	width: 100%;
+	margin: 0 auto;
+	position: relative;
+}
+
+.hptabber {
+	border: 1px solid #aaaaaa;
+}
+
+.desc h3 {
+	color: #ffffff !important;
+	margin-top: 8px !important;
+	margin-left: 10px !important;
+}
+
+.desc a {
+	color: #ffffff !important;
+}
+
+#homepagetop p {
+	line-height: 20px;
+	font-size: 15px;
+	margin-top: 0px;
+}
+
+#homepagetop {
+	background: #FFFFFF;
+	float: left;
+	width: 608px;
+	margin: 0px 0px 10px 10px;
+	padding: 0px 0px 0px 0px;
+	position: relative;
+	border: 1px solid #aaaaaa}
+
+#homepagetop a img {
+	border: none;
+}
+
+#slideshow .desc {
+	width: 608px !important;
+}
+
+#slideshow {
+	width: 610px !important;
+}
+
+
+#slideshow_navigation {
+	top: -35px !important;
+}
+
+.topstoriescontainer {
+	height: 311px !important;
+}
+
+#homepagetop {
+	margin-bottom: 0px !important;
+}
+
+
+.widgetwrap {
+	-moz-box-shadow: 1px 1px 5px #888;
+	-webkit-box-shadow: 1px 1px 5px #888;
+	box-shadow: 1px 1px 5px #888;
+}
+
+
+#homepagetop, #homepagetopsports, #homepagefull {
+	-moz-box-shadow: 1px 1px 5px #888;
+	-webkit-box-shadow: 1px 1px 5px #888;
+	box-shadow: 1px 1px 5px #888;
+}
+
+
+

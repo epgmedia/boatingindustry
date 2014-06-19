@@ -1,186 +1,345 @@
-<?php if (get_theme_mod('product-content')=="Display") { ?>				
-<div class="productshowcase">
-<?php $customcolors = get_theme_mod('product-colors'); if ($customcolors == "on") {
+<?php
 
-	echo '<div class="widgetwrap">';
+if ( get_theme_mod( 'product-content' ) == "Display" ) {
+	?>
 
-			$instance['title'] = get_theme_mod('product-title');
-			$instance['header-color'] = get_theme_mod('widgetcolor-product');
-			$instance['header-text'] = get_theme_mod('widgetcolor-product-text');
-			$instance['border-thickness'] = get_theme_mod('widget-product-thickness');
-			$instance['widget-border'] = get_theme_mod('widgetborder-product');
-			$instance['widget-background'] = get_theme_mod('widgetbackground-product');
-			$instance['widget-style'] = get_theme_mod('widget-style-product');
+	<div class="productshowcase">
+	<?php
+	$customcolors = get_theme_mod( 'product-colors' );
 
-			include(TEMPLATEPATH . "/widgetstyles.php"); 
+	if ($customcolors == "on") { ?>
 
-} else { ?>   		
+		<div class="widgetwrap">
+		<?php
+		$instance['title']             = get_theme_mod( 'product-title' );
+		$instance['header-color']      = get_theme_mod( 'widgetcolor-product' );
+		$instance['header-text']       = get_theme_mod( 'widgetcolor-product-text' );
+		$instance['border-thickness']  = get_theme_mod( 'widget-product-thickness' );
+		$instance['widget-border']     = get_theme_mod( 'widgetborder-product' );
+		$instance['widget-background'] = get_theme_mod( 'widgetbackground-product' );
+		$instance['widget-style']      = get_theme_mod( 'widget-style-product' );
 
-       <div class="widgetwrap"><div class="titlewrap610"><h2><?php echo get_theme_mod('product-title'); ?></h2></div>
-       <div class="widgetbody">
+		include( SNOTHEMEPATH . "/widgetstyles.php" );
 
-<?php } ?>
+	} else {
+	?>
 
-    		<div class="homefeatured">
+	<div class="widgetwrap">
 
-				<script type="text/javascript">
-					$(function() {
-					$(".newsticker-jcarouselliteps1").jCarouselLite({
-        					visible: 1,
-        					auto: 4000,
-        					speed: 666,
-							btnNext: ".nextps1",
-							btnPrev: ".prevps1"
-						    });
-					});
+	<div class="titlewrap610">
 
-				</script>
-    			
-    			<?php $count = 0; $category = get_theme_mod('product-cat-1'); $productcount = get_theme_mod('product-count-1'); query_posts('cat=' . $category . '&showposts='. $productcount); if (have_posts()) : while (have_posts()) : the_post(); global $post; $count++; 
-    			
+		<h2><?php echo get_theme_mod( 'product-title' ); ?></h2>
 
+	</div>
 
+	<div class="widgetbody">
 
-					if ($count==1) { $exitkey=6; ?>
+	<?php } ?>
 
-    									<div id="newsticker-demops1" style="width:160px">    
-        								<div class="newsticker-jcarouselliteps1" style="width:160px">
-        								<ul>
-								<?php } ?>
-                							<li>
-                							<div class="sportsscore" style="width:160px">
+	<div class="homefeatured">
 
-								<?php if (has_post_thumbnail()) 
-									{ the_post_thumbnail( 'homefeature', array('class' => 'featureimage'));} ?>
-								<?php $link = get_post_meta($post->ID, 'customlink', true); $click = get_post_meta($post->ID, 'click_tracker_code', true); ?>
-                    							<p class="homeheadline"><?php if ($link) echo '<a target="_blank" href="' . $link . $click .'">'; the_title(); if ($link) echo '</a>'; ?></p>
-  												<div class="productteaser"><p><?php the_content_limit(50, ''); ?></p></div>
+		<script type="text/javascript">
+			jQuery(document).ready(function ($) {
+				$(".newsticker-jcarouselliteps1").jCarouselLite({
+					visible: 1,
+					auto   : 4000,
+					speed  : 666,
+					btnNext: ".nextps1",
+					btnPrev: ".prevps1"
+				});
+			});
+		</script>
 
-                    						</div>
-                							<div class="clear"></div>
-            								</li>
+		<?php
+		$count = 0;
+		$category = get_theme_mod( 'product-cat-1' );
+		$productcount = get_theme_mod( 'product-count-1' );
+		query_posts( 'cat=' . $category . '&showposts=' . $productcount );
 
-					<?php endwhile; else: endif; ?>
+		if (have_posts()) :
 
-					<?php if ($exitkey==6) { $exitkey=0; ?>
-								</ul>
-									<button class="prevps1 leftarrow"></button>
-									<button class="nextps1 rightarrow"></button>
-    							</div>
-    							</div>
+		while (have_posts()) :
 
-    				<?php } ?>
+		the_post();
 
+		global $post;
 
-    		</div>
-    		
-    		<div class="homefeatured">
+		$count ++;
 
-				<script type="text/javascript">
-					$(function() {
-					$(".newsticker-jcarouselliteps2").jCarouselLite({
-        					visible: 1,
-        					auto: 4000,
-        					speed: 666,
-							btnNext: ".nextps2",
-							btnPrev: ".prevps2"
-						    });
-					});
+		if ($count == 1) {
+		$exitkey = 6;
+		?>
 
-				</script>
+		<div id="newsticker-demops1" style="width:160px">
 
-    			<?php $count = 0; $category = get_theme_mod('product-cat-2'); $productcount = get_theme_mod('product-count-2'); query_posts('cat=' . $category . '&showposts='. $productcount); if (have_posts()) : while (have_posts()) : the_post(); global $post; $count++; 
-    			
+			<div class="newsticker-jcarouselliteps1" style="width:160px">
 
+				<ul>
 
+					<?php } ?>
+					<li>
 
-					if ($count==1) { $exitkey=6; ?>
+						<div class="sportsscore" style="width:160px">
 
-    									<div id="newsticker-demops2" style="width:160px">    
-        								<div class="newsticker-jcarouselliteps2" style="width:160px">
-        								<ul>
-								<?php } ?>
-                							<li>
-                							<div class="sportsscore" style="width:160px">
+							<?php if ( has_post_thumbnail() ) {
 
-								<?php if (has_post_thumbnail()) 
-									{ the_post_thumbnail( 'homefeature', array('class' => 'featureimage'));} ?>
-								<?php $link = get_post_meta($post->ID, 'customlink', true); $click = get_post_meta($post->ID, 'click_tracker_code', true); ?>
-                    							<p class="homeheadline"><?php if ($link) echo '<a target="_blank" href="' . $link . $click .'">'; the_title(); if ($link) echo '</a>'; ?></p>
-  												<div class="productteaser"><p><?php the_content_limit(50, ''); ?></p></div>
+								the_post_thumbnail( 'homefeature', array( 'class' => 'featureimage' ) );
 
-                    						</div>
-                							<div class="clear"></div>
-            								</li>
+							}
 
-					<?php endwhile; else: endif; ?>
+							$link = get_post_meta( $post->ID, 'customlink', true );
+							$click = get_post_meta( $post->ID, 'click_tracker_code', true );
+							?>
+							<p class="homeheadline">
+								<?php if ( $link ) {
+									echo '<a target="_blank" href="' . $link . $click . '">';
+								}
+								the_title();
+								if ( $link ) {
+									echo '</a>';
+								} ?>
+							</p>
 
-					<?php if ($exitkey==6) { $exitkey=0; ?>
-								</ul>
-									<button class="prevps2 leftarrow"></button>
-									<button class="nextps2 rightarrow"></button>
-    							</div>
-    							</div>
+							<div class="productteaser">
 
-    				<?php } ?>
+								<p>
+									<?php the_content_limit( 50, '' ); ?>
+								</p>
 
-    		</div>
-    		
-    		<div class="homefeaturedright">
+							</div>
 
-				<script type="text/javascript">
-					$(function() {
-					$(".newsticker-jcarouselliteps3").jCarouselLite({
-        					visible: 1,
-        					auto: 4000,
-        					speed: 666,
-							btnNext: ".nextps3",
-							btnPrev: ".prevps3"
-						    });
-					});
+						</div>
 
-				</script>
+						<div class="clear"></div>
 
-    			<?php $count = 0; $category = get_theme_mod('product-cat-3'); $productcount = get_theme_mod('product-count-3'); query_posts('cat=' . $category . '&showposts='. $productcount); if (have_posts()) : while (have_posts()) : the_post(); global $post; $count++; 
-    			
+					</li>
+
+					<?php endwhile;
+
+					else:
+
+					endif;
+
+					if ($exitkey == 6) {
+					$exitkey = 0; ?>
+				</ul>
+
+				<button class="prevps1 leftarrow"></button>
+				<button class="nextps1 rightarrow"></button>
+
+			</div>
+
+		</div>
+
+	<?php } ?>
 
 
+	</div>
 
-					if ($count==1) { $exitkey=6; ?>
+	<div class="homefeatured">
 
-    									<div id="newsticker-demops3" style="width:160px">    
-        								<div class="newsticker-jcarouselliteps3" style="width:160px">
-        								<ul>
-								<?php } ?>
-                							<li>
-                							<div class="sportsscore" style="width:160px">
+		<script type="text/javascript">
+			jQuery(document).ready(function ($) {
+				$(".newsticker-jcarouselliteps2").jCarouselLite({
+					visible: 1,
+					auto   : 4000,
+					speed  : 666,
+					btnNext: ".nextps2",
+					btnPrev: ".prevps2"
+				});
+			});
+		</script>
 
-								<?php if (has_post_thumbnail()) 
-									{ the_post_thumbnail( 'homefeature', array('class' => 'featureimage'));} ?>
-								<?php $link = get_post_meta($post->ID, 'customlink', true); $click = get_post_meta($post->ID, 'click_tracker_code', true); ?>
-                    							<p class="homeheadline"><?php if ($link) echo '<a target="_blank" href="' . $link . $click .'">'; the_title(); if ($link) echo '</a>'; ?></p>
-  												<div class="productteaser"><p><?php the_content_limit(50, ''); ?></p></div>
+		<?php
+		$count = 0;
+		$category = get_theme_mod( 'product-cat-2' );
+		$productcount = get_theme_mod( 'product-count-2' );
+		query_posts( 'cat=' . $category . '&showposts=' . $productcount );
 
-                    						</div>
-                							<div class="clear"></div>
-            								</li>
+		if (have_posts()) :
 
-					<?php endwhile; else: endif; ?>
+		while (have_posts()) :
 
-					<?php if ($exitkey==6) { $exitkey=0; ?>
-								</ul>
-									<button class="prevps3 leftarrow"></button>
-									<button class="nextps3 rightarrow"></button>
-    							</div>
-    							</div>
+		the_post();
 
-    				<?php } ?>
+		global $post;
 
+		$count ++;
 
-    		</div>
+		if ($count == 1) {
 
-		<div <?php if ($customcolors==on) { ?>style="background-color:<?php echo $instance['header-color']; ?> !important;"<?php } ?>class="widgetfooter<?php if ($instance['widget-style']=="Style 3") { ?>3<?php } else { ?>1<?php } ?>"></div></div>
+		$exitkey = 6; ?>
 
-</div></div>
-                  
+		<div id="newsticker-demops2" style="width:160px">
+
+			<div class="newsticker-jcarouselliteps2" style="width:160px">
+
+				<ul>
+
+					<?php } ?>
+					<li>
+
+						<div class="sportsscore" style="width:160px">
+
+							<?php
+
+							if ( has_post_thumbnail() ) {
+								the_post_thumbnail( 'homefeature', array( 'class' => 'featureimage' ) );
+							}
+
+							$link = get_post_meta( $post->ID, 'customlink', true );
+							$click = get_post_meta( $post->ID, 'click_tracker_code', true ); ?>
+
+							<p class="homeheadline">
+								<?php if ( $link ) {
+									echo '<a target="_blank" href="' . $link . $click . '">';
+								}
+								the_title();
+								if ( $link ) {
+									echo '</a>';
+								} ?>
+							</p>
+
+							<div class="productteaser">
+
+								<p><?php the_content_limit( 50, '' ); ?></p>
+
+							</div>
+
+						</div>
+
+						<div class="clear"></div>
+
+					</li>
+
+					<?php endwhile;
+
+					else:
+
+					endif;
+
+					if ($exitkey == 6) {
+
+					$exitkey = 0; ?>
+				</ul>
+
+				<button class="prevps2 leftarrow"></button>
+				<button class="nextps2 rightarrow"></button>
+
+			</div>
+		</div>
+
+	<?php } ?>
+
+	</div>
+
+	<div class="homefeaturedright">
+
+		<script type="text/javascript">
+			jQuery(document).ready(function ($) {
+				$(".newsticker-jcarouselliteps3").jCarouselLite({
+					visible: 1,
+					auto   : 4000,
+					speed  : 666,
+					btnNext: ".nextps3",
+					btnPrev: ".prevps3"
+				});
+			});
+		</script>
+
+		<?php
+		$count = 0;
+		$category = get_theme_mod( 'product-cat-3' );
+		$productcount = get_theme_mod( 'product-count-3' );
+		query_posts( 'cat=' . $category . '&showposts=' . $productcount );
+
+		if (have_posts()) :
+
+		while (have_posts()) :
+
+		the_post();
+
+		global $post;
+
+		$count ++;
+
+		if ($count == 1) {
+
+		$exitkey = 6; ?>
+
+		<div id="newsticker-demops3" style="width:160px">
+
+			<div class="newsticker-jcarouselliteps3" style="width:160px">
+
+				<ul>
+					<?php } ?>
+					<li>
+						<div class="sportsscore" style="width:160px">
+
+							<?php if ( has_post_thumbnail() ) {
+								the_post_thumbnail( 'homefeature', array( 'class' => 'featureimage' ) );
+							}
+
+							$link = get_post_meta( $post->ID, 'customlink', true );
+							$click = get_post_meta( $post->ID, 'click_tracker_code', true );
+							?>
+							<p class="homeheadline">
+								<?php if ( $link ) {
+									echo '<a target="_blank" href="' . $link . $click . '">';
+								}
+								the_title();
+								if ( $link ) {
+									echo '</a>';
+								} ?>
+							</p>
+
+							<div class="productteaser">
+
+								<p>
+									<?php the_content_limit( 50, '' ); ?>
+								</p>
+
+							</div>
+
+						</div>
+
+						<div class="clear"></div>
+
+					</li>
+
+					<?php endwhile;
+
+					else:
+
+					endif;
+
+					if ($exitkey == 6) {
+
+					$exitkey = 0; ?>
+				</ul>
+
+				<button class="prevps3 leftarrow"></button>
+
+				<button class="nextps3 rightarrow"></button>
+
+			</div>
+
+		</div>
+
+	<?php } ?>
+
+	</div>
+
+	<div
+		<?php if ($customcolors == 'on') { ?>style="background-color:<?php echo $instance['header-color']; ?> !important;"
+		<?php } ?>class="widgetfooter<?php if ( $instance['widget-style'] == "Style 3" ) { ?>3<?php } else { ?>1<?php } ?>">
+
+	</div>
+
+	</div>
+
+	</div>
+
+	</div>
+
 <?php } ?>
