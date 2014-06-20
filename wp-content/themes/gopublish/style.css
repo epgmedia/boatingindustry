@@ -990,10 +990,12 @@ blockquote {
 }
 
 #postContent h2 {
-	background: none !important;
-	color: #2255aa !important;
-	border: none !important;
-	padding: 0 !important;
+	background: none;
+	color: #2255aa;
+	border: none;
+	border-bottom: 1px dotted rgba(34, 85, 170, 0.44);
+	padding: 0;
+	margin: 0 3px 8px 1px;
 	font-size: 21px;
 }
 
