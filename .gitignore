@@ -18,6 +18,7 @@
 # Image folders
 /wp-content/uploads**
 /wp-content/gallery**
+/wp-content/cache**
 
 ######################################
 # But not ...
