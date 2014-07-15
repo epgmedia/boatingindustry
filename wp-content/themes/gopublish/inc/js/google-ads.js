@@ -14,7 +14,7 @@ googletag.cmd = googletag.cmd || [];
 
 googletag.cmd.push(function () {
 	googletag.defineSlot('/35190362/BIM_Wallpaper_2100x1600', [1883 , 1340], 'div-gpt-ad-1380637813856-0').addService(googletag.pubads());
-	googletag.defineSlot('/35190362/' + pageTag.placementTag + 'Tag_160_SB1', [
+	googletag.defineSlot('/35190362/' + pageTag.placementTag + '_160_SB1', [
 		[120, 240],
 		[125, 125],
 		[120, 600],
@@ -22,7 +22,7 @@ googletag.cmd.push(function () {
 		[160, 240],
 		[160, 600]
 	], pageTag.divTag + '-0').addService(googletag.pubads());
-	googletag.defineSlot('/35190362/' + pageTag.placementTag + 'Tag_160_SB2', [
+	googletag.defineSlot('/35190362/' + pageTag.placementTag + '_160_SB2', [
 		[120, 240],
 		[125, 125],
 		[120, 600],
