@@ -24,7 +24,7 @@ if (!defined('WP_POST_REVISIONS')) {
 }
 
 // Use generated CSS
-define( 'VERSIONCSS', TRUE );
+define( 'VERSIONCSS', FALSE );
 
 // Settings and Constants
 require_once( SNOINCPATH . '/theme-constants.php' );
