@@ -8,19 +8,18 @@ googletag.cmd.push( function() {
 	googletag.defineOutOfPageSlot( ad_data.ad_position, 'div-gpt-ad-1398116137114-0-oop' ).addService( googletag.pubads() );
 	googletag.pubads().collapseEmptyDivs(true);
 	googletag.pubads().addEventListener('slotRenderEnded', function(event) {
-		var f_slot = event.slot.k;
+
+		console.log( event.slot.j );
+		var f_slot = event.slot.j;
 		if ( ( f_slot === ad_data.ad_position) && !event.isEmpty ) {
-			//console.log( f_slot + ' slot was rendered' );
 			jQuery( '.interstitialAd' ).show();
 		}
-		//console.log( f_slot + ' Complete' );
-		//console.log( event );
 
 	});
 	googletag.enableServices();
 });
 
-jQuery(document).ready( function( $ ) {
+jQuery(document).ready(function($) {
 
 	$ad_postition = $('.interstitialAd');
 	$close_button = $('.close-interstitial');

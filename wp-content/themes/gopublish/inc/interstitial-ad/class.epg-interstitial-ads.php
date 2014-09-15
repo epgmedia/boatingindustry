@@ -66,7 +66,7 @@ class epg_interstitial_ads {
 		wp_register_script(
 			'epg_interstitial_ad',
 			$this->dir_uri . '/interstitial_ad.js',
-			array( 'jquery' ),
+			array( 'jquery', 'google-ads' ),
 			false,
 			false
 		);
