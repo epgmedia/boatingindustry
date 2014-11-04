@@ -83,7 +83,7 @@ return array(
 	'fragmentcache.lifetime' => 180,
 	'fragmentcache.groups' => array(
 	),
-	'pgcache.enabled' => true,
+	'pgcache.enabled' => false,
 	'pgcache.comment_cookie_ttl' => 1800,
 	'pgcache.debug' => false,
 	'pgcache.engine' => 'file_generic',
@@ -421,7 +421,7 @@ return array(
 	'browsercache.other.etag' => false,
 	'browsercache.other.w3tc' => false,
 	'browsercache.other.replace' => false,
-	'browsercache.timestamp' => '1407424772',
+	'browsercache.timestamp' => '1413816304',
 	'browsercache.replace.exceptions' => array(
 		0 => '',
 	),
