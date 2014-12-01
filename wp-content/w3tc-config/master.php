@@ -655,7 +655,7 @@ return array(
 	'minify.auto.disable_filename_length_test' => false,
 	'common.instance_id' => 1065103953,
 	'common.force_master' => true,
-	'newrelic.enabled' => true,
+	'newrelic.enabled' => false,
 	'newrelic.api_key' => '5fc73e478b5de528dfbe0e641120de65eaec5109fa9bb59',
 	'newrelic.account_id' => '442412',
 	'newrelic.application_id' => 3654168,
