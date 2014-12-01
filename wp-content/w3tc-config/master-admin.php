@@ -28,5 +28,5 @@ return array(
 	'notes.remove_w3tc' => false,
 	'notes.hide_extensions' => array(
 	),
-	'evaluation.reminder' => 1405815920,
+	'evaluation.reminder' => 1419882043,
 );

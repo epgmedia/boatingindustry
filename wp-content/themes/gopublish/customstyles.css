@@ -325,8 +325,8 @@ h4.widget7 a {
 }
 
 .widgetbody3 {
-	border-right: 0px solid #cccccc;
-	border-left: 0px solid #cccccc;
+	border-right: 0 solid #cccccc;
+	border-left: 0 solid #cccccc;
 	background-color: #eeeeee;
 	padding: 10px;
 	overflow: hidden;

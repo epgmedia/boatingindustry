@@ -28,6 +28,10 @@ require_once( SNOINCPATH . '/view/view-functions.php' );
 /** Include tablecloth template and files */
 require_once( SNOINCPATH . '/tablecloth/table-cloth-functions.php' );
 
+/** Interstitial Ad Positions */
+require_once( SNOINCPATH . '/interstitial-ad/class.epg-interstitial-ads.php' );
+new epg_interstitial_ads();
+
 /**
  * How to use hook.
  *
@@ -45,3 +49,10 @@ function pre_widget_load() {
 	do_action( 'pre_widget_load' );
 }
 
+
+/**
+ * Hook for running functions after < head >
+ */
+function after_header() {
+	do_action( 'after_header', '' );
+}

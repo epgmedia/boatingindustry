@@ -24,7 +24,7 @@ if (!defined('WP_POST_REVISIONS')) {
 }
 
 // Use generated CSS
-define( 'VERSIONCSS', TRUE );
+define( 'VERSIONCSS', FALSE );
 
 // Settings and Constants
 require_once( SNOINCPATH . '/theme-constants.php' );
@@ -36,11 +36,11 @@ require_once( SNOINCPATH . '/theme-functions.php' );
 include( SNOTHEMEPATH . '/tools/theme-options.php' );
 include( SNOTHEMEPATH . '/tools/enews.php' );
 include( SNOTHEMEPATH . '/tools/snotext.php' );
-//include( SNOTHEMEPATH . '/tools/audio.php' );
-//include( SNOTHEMEPATH . '/tools/video.php' );
 include( SNOTHEMEPATH . '/tools/videoembed.php' );
 include( SNOTHEMEPATH . '/tools/advertisement.php' );
 include( SNOTHEMEPATH . '/tools/categorywidget.php' );
 include( SNOTHEMEPATH . '/tools/productshowcase.php' );
 include( SNOTHEMEPATH . '/tools/pagewidget.php' );
 include( SNOTHEMEPATH . '/class-widget-styles.php' );
+//include( SNOTHEMEPATH . '/tools/audio.php' );
+//include( SNOTHEMEPATH . '/tools/video.php' );
