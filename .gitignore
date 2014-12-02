@@ -9,9 +9,6 @@
 *.log
 error_log
 
-# But not hidden files
-!.*
-
 ########################
 # Sitemap              #
 ########################
@@ -60,3 +57,5 @@ wp-content/wp-cache-config.php
 # Site Specific        #
 ########################
 
+# CSS files
+wp-content/themes/gopublish/style.*.css
