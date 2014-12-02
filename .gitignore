@@ -20,7 +20,6 @@ sitemap.xml.gz
 # Wordpress            #
 ########################
 
-index.php
 wp-activate.php
 wp-blog-header.php
 wp-comments-post.php
