@@ -36,11 +36,7 @@
 
 <?php after_header(); ?>
 
-<div id="rightcolumnads">
-
-	<?php if ( function_exists( 'dynamic_sidebar' ) && dynamic_sidebar( 6 ) ) : else : endif; ?>
-
-</div>
+<?php get_sidebar('ads'); ?>
 
 <div id="pagetop"></div>
 
