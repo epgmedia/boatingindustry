@@ -85,4 +85,4 @@
 
 <!-- The main column ends  -->
 
-<?php get_footer(); ?><a href="https://plus.google.com/109143106922726430364" rel="publisher">Google+</a>
+<?php get_footer(); ?>
