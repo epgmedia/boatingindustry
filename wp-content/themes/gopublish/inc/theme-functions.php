@@ -28,10 +28,6 @@ require_once( SNOINCPATH . '/view/view-functions.php' );
 /** Include tablecloth template and files */
 require_once( SNOINCPATH . '/tablecloth/table-cloth-functions.php' );
 
-/** Interstitial Ad Positions */
-require_once( SNOINCPATH . '/interstitial-ad/class.epg-interstitial-ads.php' );
-new epg_interstitial_ads();
-
 /**
  * How to use hook.
  *
