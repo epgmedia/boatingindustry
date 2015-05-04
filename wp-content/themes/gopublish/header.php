@@ -36,21 +36,15 @@
 
 <?php after_header(); ?>
 
-<div id="rightcolumnads">
-
-	<?php if ( function_exists( 'dynamic_sidebar' ) && dynamic_sidebar( 6 ) ) : else : endif; ?>
-
-</div>
-
 <div id="pagetop"></div>
 
-<?php if ( get_theme_mod( 'leaderboard-location' ) == "Above Header" ) {
-
-	get_template_part( "leaderboardhead" );
-
-} ?>
-
 <div id="wrap">
+
+	<?php if ( get_theme_mod( 'leaderboard-location' ) == "Above Header" ) {
+
+		get_template_part( 'leaderboardhead' );
+
+	} ?>
 
 	<div id="header">
 
