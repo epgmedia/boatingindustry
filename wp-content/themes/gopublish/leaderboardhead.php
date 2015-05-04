@@ -1,6 +1,6 @@
 <?php if ( get_theme_mod( 'display-leader' ) == "Yes" ) { ?>
 
-	<div id="leaderboard" class="leaderboardAd">
+	<div class="leaderboard">
 
 		<?php if ( get_theme_mod( 'leaderad-type' ) == "Static Image" ) {
 

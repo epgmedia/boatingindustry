@@ -36,17 +36,15 @@
 
 <?php after_header(); ?>
 
-<?php get_sidebar('ads'); ?>
-
 <div id="pagetop"></div>
 
-<?php if ( get_theme_mod( 'leaderboard-location' ) == "Above Header" ) {
-
-	get_template_part( "leaderboardhead" );
-
-} ?>
-
 <div id="wrap">
+
+	<?php if ( get_theme_mod( 'leaderboard-location' ) == "Above Header" ) {
+
+		get_template_part( 'leaderboardhead' );
+
+	} ?>
 
 	<div id="header">
 

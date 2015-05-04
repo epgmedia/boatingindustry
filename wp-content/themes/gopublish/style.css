@@ -24,6 +24,7 @@ body {
 }
 
 #wrap {
+    float: left;
 	width: 960px;
 	position: relative;
 	padding: 0;
@@ -1336,6 +1337,7 @@ img.alignleft {
 	padding: 10px 0 0 0;
 	text-align: center;
 	border-top: 5px solid #aaaaaa;
+    float: left;
 }
 
 #footer p {
@@ -2701,14 +2703,13 @@ img.sliderimage {
 	border: none !important;
 }
 
-#leaderboard {
-	background: #fffde0;
-	width: 960px;
-	color: #000000;
-	overflow: hidden;
+.leaderboard {
+    margin: auto;
+    overflow: hidden;
 }
-#leaderboard div {
-	margin: 15px auto !important;
+
+.leaderboard > div {
+    margin: 15px auto;
 }
 
 #leaderboard a img {
@@ -2734,6 +2735,7 @@ img.sliderimage {
 	margin: 10px 0 0 10px;
 	height: 400px;
 	float: right;
+    position: relative;
 }
 
 #leaderboardright {
@@ -2816,15 +2818,6 @@ img.center {
 .productshowcase {
 	margin-bottom: 10px;
 }
-
-.wallpaper {
-	background-image: url('');
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	background-position: left;
-}
-
-
 .interstitialAd {
 	display: none;
 	z-index: 10000;
@@ -2904,17 +2897,3 @@ img.center {
 }
 
 /* This button was generated using CSSButtonGenerator.com */
-
-
-/************************************************
-
-Wallpaper Ad
-************************************************/
-.wallpaperAd, .wallpaperAd div, .wallpaperAd div iframe {
-	position:fixed;
-	top:0;
-	left:0;
-	width:100%;
-	height:100%;
-	z-index:-1;
-}
