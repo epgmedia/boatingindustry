@@ -503,7 +503,16 @@ class Mixin_Attach_To_Post_Display_Tab extends Mixin
         $this->object->do_not_cache();
         // Ensure that JS is returned
         $this->object->set_content_type('javascript');
-        while (ob_get_level() > 0) {
+        $buffer_limit = 0;
+        $zlib = ini_get('zlib.output_compression');
+        if (!is_numeric($zlib) && $zlib == 'On') {
+            $buffer_limit = 1;
+        } else {
+            if (is_numeric($zlib) && $zlib > 0) {
+                $buffer_limit = 1;
+            }
+        }
+        while (ob_get_level() != $buffer_limit) {
             ob_end_clean();
         }
         // Get all entities used by the display tab
@@ -522,8 +531,13 @@ class Mixin_Attach_To_Post_Display_Tab extends Mixin
         $all_tags->id = 'All';
         array_unshift($tags, $all_tags);
         $display_types = array();
+        $registry = C_Component_Registry::get_instance();
         foreach ($display_type_mapper->find_all() as $display_type) {
             if (isset($display_type->hidden_from_ui) && $display_type->hidden_from_ui) {
+                continue;
+            }
+            $available = $registry->is_module_loaded($display_type->name);
+            if (!apply_filters('ngg_atp_show_display_type', $available, $display_type)) {
                 continue;
             }
             $display_types[] = $display_type;
